@@ -9,9 +9,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
@@ -39,33 +38,21 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 <!-- First Grid -->
 
-<div id="pageone" data-role="main" class="ui-content">
-  <a href="#myPopup" data-rel="popup" data-position-to="window">
-  <img src="images/garden.jpg" alt="Skaret View" style="width:200px;"></a>
-  <div data-role="popup" id="myPopup">
-    <p></p>
-    <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/garden.jpg" style="width:400px;height:400px;" alt="Skaret View">
-  </div>
+<!-- Trigger the Modal -->
+<img id="myImg" src="images/garden.jpg" alt="Trolltunga, Norway" width="300" height="200">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
 </div>
-
-<div id="pageone" data-role="main" class="ui-content">
-  <a href="#myPopup2" data-rel="popup" data-position-to="window">
-  <img src="images/Pacman.jpg" alt="Skaret View" style="width:200px;"></a>
-  <div data-role="popup" id="myPopup2">
-    <p></p>
-    <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/Pacman.jpg" style="width:400px;height:400px;" alt="Skaret View">
-  </div>
-</div>
-<div id="pageone" data-role="main" class="ui-content">
-  <a href="#myPopup3" data-rel="popup" data-position-to="window">
-  <img src="images/pattern 3.jpg" alt="Skaret View" style="width:200px;"></a>
-
-  <div data-role="popup" id="myPopup3">
-    <p></p>
-    <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/pattern 3.jpg" style="width:400px;height:400px;" alt="Skaret View">
-  </div>
-</div></center>
-
 
 
 
@@ -83,6 +70,26 @@ function myFunction() {
     } else {
         x.className = x.className.replace(" w3-show", "");
     }
+}
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
 }
 </script>
 
