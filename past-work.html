@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Past Work</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="web.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-blue w3-card-2 w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+
+    <a href="home.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About</a>
+    <a href="github.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Why Github</a>
+    <a href="Past-Work.html" class="w3-bar-item w3-button w3-padding-large w3-white">Past Work</a>
+    <a href="work.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Top 2 Work</a>
+    <a href="learn.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">What I Learned</a>
+      <a href="java.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Java</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+
+
+
+<!-- First Grid -->
+
+<div id="pageone" data-role="main" class="ui-content">
+  <a href="#myPopup" data-rel="popup" data-position-to="window">
+  <img src="images/garden.jpg" alt="Skaret View" style="width:200px;"></a>
+  <div data-role="popup" id="myPopup">
+    <p></p>
+    <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/garden.jpg" style="width:400px;height:400px;" alt="Skaret View">
+  </div>
+</div>
+
+<div id="pageone" data-role="main" class="ui-content">
+  <a href="#myPopup2" data-rel="popup" data-position-to="window">
+  <img src="images/Pacman.jpg" alt="Skaret View" style="width:200px;"></a>
+  <div data-role="popup" id="myPopup2">
+    <p></p>
+    <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/Pacman.jpg" style="width:400px;height:400px;" alt="Skaret View">
+  </div>
+</div>
+<div id="pageone" data-role="main" class="ui-content">
+  <a href="#myPopup3" data-rel="popup" data-position-to="window">
+  <img src="images/pattern 3.jpg" alt="Skaret View" style="width:200px;"></a>
+
+  <div data-role="popup" id="myPopup3">
+    <p></p>
+    <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/pattern 3.jpg" style="width:400px;height:400px;" alt="Skaret View">
+  </div>
+</div></center>
+
+
+
+
+
+
+<!-- Footer -->
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
