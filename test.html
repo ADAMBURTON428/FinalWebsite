@@ -1,42 +1,42 @@
+
 <!DOCTYPE html>
 <html>
-<head>
+<title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-</head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
 
+<div class="w3-container">
 
 
-  <div id="pageone" data-role="main" class="ui-content">
-    <a href="#myPopup" data-rel="popup" data-position-to="window">
-    <img src="images/garden.jpg" alt="Skaret View" style="width:200px;"></a>
-
-    <div data-role="popup" id="myPopup">
-      <p></p>
-      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/garden.jpg" style="width:400px;height:400px;" alt="Skaret View">
-    </div>
+<div class="w3-row-padding">
+  <div class="w3-container w3-third">
+    <img src="images/garden.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
   </div>
-
-  <div id="pageone" data-role="main" class="ui-content">
-    <a href="#myPopup2" data-rel="popup" data-position-to="window">
-    <img src="images/Pacman.jpg" alt="Skaret View" style="width:200px;"></a>
-
-    <div data-role="popup" id="myPopup2">
-      <p></p>
-      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/Pacman.jpg" style="width:400px;height:400px;" alt="Skaret View">
-    </div>
+  <div class="w3-container w3-third">
+    <img src="images/Pacman.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
   </div>
+  <div class="w3-container w3-third">
+    <img src="images/pattern 3.jpg" style="width:100%;cursor:pointer"
+    onclick="onClick(this)" class="w3-hover-opacity">
   </div>
 </div>
-<div id="pageone" data-role="main" class="ui-content">
-  <a href="#myPopup3" data-rel="popup" data-position-to="window">
-  <img src="images/pattern 3.jpg" alt="Skaret View" style="width:200px;"></a>
 
-  <div data-role="popup" id="myPopup3">
-    <p></p>
-    <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/pattern 3.jpg" style="width:400px;height:400px;" alt="Skaret View">
+<div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+  <div class="w3-modal-content w3-animate-zoom">
+    <img id="img01" style="width:100%">
   </div>
 </div>
+
+<script>
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+}
+</script>
+
+</body>
+</html>
